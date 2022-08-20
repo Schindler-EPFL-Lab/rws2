@@ -1,6 +1,4 @@
 {
-    "azdoPullRequests.projectName": "CRD-NT_ARCO",
-    "azdoPullRequests.orgUrl": "https://dev.azure.com/devsdb",
     "python.linting.flake8Enabled": true,
     "python.linting.prospectorEnabled": false,
     "python.linting.enabled": true,
