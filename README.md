@@ -1,4 +1,6 @@
-# README
+# ABB Robot Web Server 2
+
+[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/SchindlerReGIS.rws2?branchName=main)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=1209&branchName=main)
 
 ## Introduction
 
@@ -15,7 +17,3 @@ The library should be then installed in editable mode.
 ## Contribute
 
 PR request on GitHub are welcome.
-
-## Robot Web Server 2
-
-[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/SchindlerReGIS.rws2?branchName=main)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=1209&branchName=main)
