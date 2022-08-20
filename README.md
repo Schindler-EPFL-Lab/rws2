@@ -18,4 +18,4 @@ PR request on GitHub are welcome.
 
 ## Robot Web Server 2
 
-[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/rws2?branchName=refs%2Fpull%2F12569%2Fmerge)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=854&branchName=refs%2Fpull%2F12569%2Fmerge)
+[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/SchindlerReGIS.rws2?branchName=main)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=1209&branchName=main)
