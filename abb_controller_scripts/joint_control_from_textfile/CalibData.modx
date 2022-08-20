@@ -1,3 +1,0 @@
-MODULE CalibData
-    PERS tooldata RG2:=[TRUE,[[0,0,218],[1,0,0,0]],[0.84,[0,0,64],[1,0,0,0],0,0,0]];
-ENDMODULE

@@ -2,11 +2,12 @@ import ast
 import json
 import math
 import os
-from typing import Optional, Union
+from typing import Optional, Tuple, Union
 
 import xmltodict
 from requests import Response, Session
 from requests.auth import HTTPBasicAuth
+
 from rws2.utility.logger import log
 
 
@@ -83,7 +84,7 @@ class RWS:
         rot = data_list[1]  # Get orientation of robtarget
         return trans, rot
 
-    def get_gripper_position(self) -> (list[float], list[float]):
+    def get_gripper_position(self) -> Tuple[list[float], list[float]]:
         """
         Gets translational and rotational of the UiS tool 'tGripper'
         with respect to the work object 'wobjTableN'.
@@ -235,7 +236,9 @@ class RWS:
         self.session.post(self.base_url + "/rw/mastership/request")
 
     def release_mastership(self) -> None:
-        self.session.post(self.base_url + "/rw/mastership/release",)
+        self.session.post(
+            self.base_url + "/rw/mastership/release",
+        )
 
     def request_rmmp(self) -> None:
         """
@@ -254,7 +257,8 @@ class RWS:
 
         payload = {"ctrl-state": "motoron"}
         resp = self.session.post(
-            self.base_url + "/rw/panel/ctrl-state?ctrl-state=motoron", data=payload,
+            self.base_url + "/rw/panel/ctrl-state?ctrl-state=motoron",
+            data=payload,
         )
 
         if resp.status_code == 204:
@@ -320,7 +324,8 @@ class RWS:
 
         payload = {"stopmode": "stop", "usetsp": "normal"}
         resp = self.session.post(
-            self.base_url + "/rw/rapid/execution/stop", data=payload,
+            self.base_url + "/rw/rapid/execution/stop",
+            data=payload,
         )
         if resp.status_code == 204:
             print("RAPID execution stopped")
@@ -332,7 +337,9 @@ class RWS:
         Gets the execution state of the controller.
         """
 
-        resp = self.session.get(self.base_url + "/rw/rapid/execution?json=1",)
+        resp = self.session.get(
+            self.base_url + "/rw/rapid/execution?json=1",
+        )
         _dict = xmltodict.parse(resp.content)
         data = _dict["html"]["body"]["div"]["ul"]["li"]["span"][0]["#text"]
         return data
@@ -512,7 +519,7 @@ class RWS:
         tool: str = "tool0",
         wobj: str = "wobj0",
         frame: str = "Base",
-    ) -> (list[float], list[float], list[float]):
+    ) -> Tuple[list[float], list[float], list[float]]:
         """
         Gets the robot tcp position (mm), orientation (quaternions) and axis
         configuration.

@@ -1,51 +1,21 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# README
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
-
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
-# Robot Web Server 2
-
-[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/rws2?branchName=refs%2Fpull%2F12569%2Fmerge)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=854&branchName=refs%2Fpull%2F12569%2Fmerge)
+## Introduction
 
 This package provides code to interact with [ABB robot web service](https://developercenter.robotstudio.com/api/RWS?urls.primaryName=Introduction).
 Tested and developed for version `3HAC073675-001 Revision:D`.
 
 Code updated from [ABB Robot Web Service](https://github.com/prinsWindy/ABB-Robot-Machine-Vision/tree/master/RobotWebServices).
-# ARCO learning from demonstrations
 
-[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/arco-learning-by-demonstration)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/arco-learning-by-demonstration)
+## Build and Test
 
-This package provides the python code implementation of the learning from demonstrations framework.
-The learning algorithm follows the dynamic movement primitives approach, implemented with the work and 
-code of A. J. Ijspeert, J. Nakanishi, H. Hoffmann, P. Pastor, and S. Schaal, "Dynamical 
-movement primitives: Learning attractor models for motor behaviors," Neural Computationvol. 25, no. 2, pp. 328–373, 2013. doi: 10.1162/NECO_a_00393.
+Clone the repo from Github, and run `pip install -e .` in the root folder.
+The library should be then installed in editable mode.
 
+## Contribute
 
-# Demonstration Data Collection
+PR request on GitHub are welcome.
 
-Record and play back robot trajectory demonstration.
+## Robot Web Server 2
 
-## Record data
-
-Data recording is done by running the `recorder.py` script. \
-The data is recorded in the json format. \
-To stop the recording, press the `q` keyboard button.
-
-## Play recorded data
-
-To play a json file, use the script `player.py`.
+[![Build Status](https://dev.azure.com/devsdb/CRD-NT_ARCO/_apis/build/status/rws2?branchName=refs%2Fpull%2F12569%2Fmerge)](https://dev.azure.com/devsdb/CRD-NT_ARCO/_build/latest?definitionId=854&branchName=refs%2Fpull%2F12569%2Fmerge)

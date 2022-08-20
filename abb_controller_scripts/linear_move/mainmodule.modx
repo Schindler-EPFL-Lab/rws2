@@ -1,8 +1,0 @@
-MODULE mainmodule
-    PERS robtarget pose;
-    PERS speeddata vel := [50, 200, 5000, 1000];
-    PROC main()
-        TPWrite "Move to target";
-        MoveL pose, vel, fine, RG2;
-    ENDPROC  
-ENDMODULE

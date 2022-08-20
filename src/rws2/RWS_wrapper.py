@@ -69,20 +69,21 @@ class RwsWrapper:
 
     def move_robot_linearly(self, pose: str, is_blocking: bool = True) -> None:
         """
-        Loads the RAPID program linear_move.pgf (can be found in abb_controller_scripts)
+        Loads the RAPID program linear_move.pgf (can be found in
+        abb_controller_scripts)
         and sets the new value of the RAPID variable [pose]. Then it moves linearly to
         the defined pose.
 
-       :param pose: string containing a list of list with the following robot
-       information
-       :param is_blocking: option to have the program waiting for the motion end
-        [
-        [x, y, z],
-        [q1, q2, q3, q4],
-        [cf1, cf4, cf6, cfx],
-        [9e9, 9e9, 9e9, 9e9, 9e9, 9e9],
-        ]
-       """
+        :param pose: string containing a list of list with the following robot
+        information
+        :param is_blocking: option to have the program waiting for the motion end
+         [
+         [x, y, z],
+         [q1, q2, q3, q4],
+         [cf1, cf4, cf6, cfx],
+         [9e9, 9e9, 9e9, 9e9, 9e9, 9e9],
+         ]
+        """
         self.robot.upload_program_to_controller(
             prog_path="data/rapid_programs/linear_move/linear_move.pgf"
         )
@@ -105,7 +106,7 @@ class RwsWrapper:
             "joint_control_from_textfile.pgf"
         )
         time.sleep(1)
-        goal = str([goal_j.tolist(), [9E+9, 9E+9, 9E+9, 9E+9, 9E+9, 9E+9]])
+        goal = str([goal_j.tolist(), [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]])
         self.set_RAPID_variable(variable_name="joint_target", new_value=goal)
         self.robot.motors_on()
         self.robot.start_RAPID(pp_to_reset=True)
