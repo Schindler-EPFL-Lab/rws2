@@ -6,6 +6,9 @@
 trigger:
   - main
 
+pr:
+  - main
+
 jobs:
 - job: 'Lint'
   pool:
