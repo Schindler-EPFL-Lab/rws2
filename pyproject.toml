@@ -1,6 +1,18 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+version = "0.0.1"
+description = "A package to control an ABB robot running RobotWare >= 7"
+name = "rws2"
+authors = [{name = "Lorenzo Panchetti", email = "lorenzo.panchetti@schindler.com"}]
+readme = "README.md"
+dependencies = [
+  "requests>=2.27.1",
+  "xmltodict>=0.12.0",
+  "numpy>=1.22.1",
 ]
-build-backend = "setuptools.build_meta"
+
+[project.urls]
+Home = "https://github.com/SchindlerReGIS/rws2"
